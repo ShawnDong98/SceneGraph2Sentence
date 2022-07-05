@@ -11,11 +11,11 @@ tf.config.experimental.set_memory_growth(physical_devices[0], True)
 from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.keras.losses import sparse_categorical_crossentropy
-from datasets import COCOTrainDataset, COCOTestDataset, COCOCacheDataset, MyBatchLoader
+from dataset.datasets import COCOTrainDataset, COCOTestDataset, COCOCacheDataset, MyBatchLoader
 from spektral.data import BatchLoader
 from spektral.transforms import GCNFilter
-from models import MyGNN, TransformerDecoderBlock, TransformerDecoder, PositionalEmbedding
-from metric import BleuScore
+from model.models import MyGNN, TransformerDecoderBlock, TransformerDecoder, PositionalEmbedding
+from utils.metric import BleuScore
 
 import numpy as np
 from tqdm import tqdm

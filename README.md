@@ -364,6 +364,17 @@ class COCOTestDataset(Dataset):
         return output
 ```
 
-## Train
+## Train & Test
+
+```bash
+python main.py
+```
 
 # Results
+
+|BLEU@1|BLEU@2|BLEU@3|BLEU@4|
+|:-:|:-:|:-:||:-:|
+|73.36|50.57|45.36|41.64|
+
+
+
