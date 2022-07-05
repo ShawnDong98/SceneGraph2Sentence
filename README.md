@@ -146,6 +146,18 @@ class COCOCacheDataset(Dataset):
         return output
 ```
 
+
+```python
+source_data_path = ["test.json"]
+vocab_path = 'tv_layer.pkl'
+graph_idx2sen_path = 'graph_idx2sen_cache.json'
+dataset = COCOCacheDataset(
+    source_data_path,
+    vocab_path=vocab_path,
+    graph_idx2sen_path = graph_idx2sen_path)
+dataset.read()
+```
+
 ## Prepare Train Dataset
 
 You can preprocess train captions to make a train dataset.
@@ -255,6 +267,18 @@ class COCOTrainDataset(Dataset):
         return output
 ```
 
+```python
+source_data_path = ["train.json"]
+vocab_path = 'tv_layer.pkl'
+graph_idx2sen_path = 'graph_idx2sen_train.json'
+dataset = COCOTrainDataset(
+    source_data_path,
+    vocab_path=vocab_path,
+    graph_idx2sen_path = graph_idx2sen_path)
+dataset.read()
+```
+
+
 ## Prepare Test Dataset
 
 You can preprocess test captions to make a test dataset.
@@ -362,6 +386,17 @@ class COCOTestDataset(Dataset):
                 Graph(x=data['x'], a=data['a'], y=data['y'])
             )
         return output
+```
+
+```python
+source_data_path = ["test.json"]
+vocab_path = 'tv_layer.pkl'
+graph_idx2sen_path = 'graph_idx2sen_test.json'
+dataset = COCOTestDataset(
+    source_data_path,
+    vocab_path=vocab_path,
+    graph_idx2sen_path = graph_idx2sen_path)
+dataset.read()
 ```
 
 ## Train & Test
